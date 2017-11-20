@@ -1,0 +1,11 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "fa770b500c7af78b74d4380ca0889eb9"
+build_time: [564489261, 112193000]
+inputs:
+  "/Users/apple-1/Documents/xCode/CoreDataSampleApp/CoreDataSampleApp/ViewController.swift": [564237611, 0]
+  "/Users/apple-1/Documents/xCode/CoreDataSampleApp/CoreDataSampleApp/customviewIB.swift": [9223372036854775807, 0]
+  "/Users/apple-1/Documents/xCode/CoreDataSampleApp/CoreDataSampleApp/testViewController.swift": [564485575, 0]
+  "/Users/apple-1/Documents/xCode/CoreDataSampleApp/CoreDataSampleApp/AppDelegate.swift": [564042395, 0]
+  "/Users/apple-1/Documents/xCode/CoreDataSampleApp/Build/Intermediates/CoreDataSampleApp.build/Debug-iphonesimulator/CoreDataSampleApp.build/DerivedSources/CoreDataGenerated/CoreDataSampleApp/Task+CoreDataClass.swift": [564211704, 0]
+  "/Users/apple-1/Documents/xCode/CoreDataSampleApp/Build/Intermediates/CoreDataSampleApp.build/Debug-iphonesimulator/CoreDataSampleApp.build/DerivedSources/CoreDataGenerated/CoreDataSampleApp/Task+CoreDataProperties.swift": [564211704, 0]
+  "/Users/apple-1/Documents/xCode/CoreDataSampleApp/Build/Intermediates/CoreDataSampleApp.build/Debug-iphonesimulator/CoreDataSampleApp.build/DerivedSources/CoreDataGenerated/CoreDataSampleApp/CoreDataSampleApp+CoreDataModel.swift": [564211704, 0]
