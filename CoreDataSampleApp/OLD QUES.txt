@@ -1,0 +1,825 @@
+ QUE stephpatsalis@gmail.com  Axbox36058 , Ucorsa2017 , Wednesday20
+
+
+
+https://www.indiabix.com/hr-interview/questions-and-answers/
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+SWIFT IS Program LANGUAGE FOR creating IOS & OS X applications…uses cocoa & cocoa touch framewors
+1. reuseidentifier is an id from which you can get cell from it, in a Tableview
+2. closures - an inner function that has access to the outer (enclosing) function’s variables
+3. why ? used during deflation —>> tells it has OPTIONAL property… whether it holds a value or null value,it's possible to avoid runtime errors when accessing that property
+ex: var optionalName : String? = “John"
+if optionalName != nil { print(“Your name is \(optionalName!)”) }
+41. use of double ?? —>>  ?? used to provide default value for a variable let missingName : String? = nil
+42. let realName : String? = “John Doe"
+43. let existentName : String = missingName ?? realName
+44. why ! ->> means (u need to unwrap optional) —> that variable or constant containsome value .. so please use it
+45. let -> immutable — declare constants- not able to change -> let test = 30
+46. var -> mutable - declaring variables -> var test = “someone"
+47. Functions -> custom ..has global scope which return some value => methods -> usually predefined type or attributes
+48. Optional chaining is querying and calling properties -> safely unwrap by (?)
+49. Optional binding is a term used when you assign temporary variables from optionals
+50. external parameters syntax —> func sendMessage(from name1 :String, to name2 :String) { print("Sending message from \(name1) to \(name2)") } 
+51. deinitializer -> additional for cleanup for custom class  handle errors ->> do { } catch {} to try —>   func canThrowErrors() throws -> String  —> func canThrowErrors() throws -> String //How to call a method that throws an error try canThrowErrors() //Or specify it as an optional let maybe = try? canThrowErrors()</pre>
+52. Guard Statements —> Basic errors —> exit early if your code reaches there —> if that error occurs -> exit —> guard let courses = student.courses! else { return }
+53. IOS Architecture -> Cocoa Touch(API basically written in objc - top layer) -media service(audio - graphic) - core os -__( network-memory,file , threads) — phone hardware 
+54. how swift is deployed —> it bundles all client side codes  (i.e classe files .. libraries) -> 
+55. features -> eliminates entire classes of unsafe code -> 
+56. Variables are always initialized before use -> static type -> strongly typed languages -> throws error at compile time -> 
+57. Memory is managed automatically
+58. no use of semi-colon -> type safety -> if your code expects a string it can’t pass Int
+59. types of integers -> unsigned and signed integers in 8, 16, 32 and 64 bit forms
+60. double - very large decimal -> float - small decimal 
+61. multiple commented lines —> /* kjgdxwgdiwd  */
+62. collection types -> Array dictionary sets -> Var cardNames = [ “Robert”, “Lisa”, “Kevin”]  ->  var cards = [ “Robert”: 22, “Lisa” : 24, and “Kevin”: 26] -> var cards:Set = [ “Robert”: 22, “Lisa” : 24, and “Kevin”: 26]
+63. control flow -> if for while for in control transfer-> break continue return
+64. XCODE -> IDE Apple’s integrated development environment -> to design apps for Apple products -> creating your app, to testing, submitting and optimizing it to the App store
+65. COCOA -> FRAMEWORK -> API USING obj c or swift 
+66. data types in Swift -> string, int, boolean,float,double
+67. swift is  new 2014
+68. UI elements and some common ways you can add them to your app -> buttons-> images texts
+69. reuseIdentifier -> improves scroll performance by alleviating the need to create new views while scrolling win table views
+70. common execution states in iOS -> Not Running(foreceshudown) Inactive-> running FG but not receiving any events Active -> running in FG but its receiving events -> background -> minimized state -> suspended -> background but not executing any events 
+71. Managed object context -> life-cycle management, notifications, and concurrency
+72. All UI updates must be performed in the main thread -> dispatch Async queue does not guarantee that the alert text will be displayed on the UI
+73. your new app is prone to crashing -> Determine the iOS version and make or model of the device -> Gather enough information to reproduce the issue -> Acquire device logs -> begin debugging -> 
+74. iPhone released in 2007
+75. var thing = “cars" let closure = { [thing] in print("I love \(thing)”) }thing = "airplanes"closure() captured value doesn't change, even if you assign a new value to things 35. Function Types -> made up of the parameter types and the return type (String)->(String) is a function type with parameter & no return value (multiple parameter type & multiple return type) func test(a:String)->String { print("hello”) } 36. Type Alias -> use type alias syntax.. u can store string with custom variable name & Ex : type alias nir = String let a:nir = “Hello” print(a)   37. Int vs UINT —> signed & unsigned -> accepts (+ve , -ve & 0 ) / unsigned (=ve & 0 no -ve) 38. Swift has a set of predefined operators that perform different types of operations, such as arithmetic or logic .. + - && || += > < 39. When should you use a structure, and when should you use a class? —>  
+76. Classes support inheritance, structures don't
+77. Classes are reference types, structures are value types
+78. At runtime, structures are more performant than classes because method invocations are statically bound, whereas method invocation for classes is dynamically resolved at runtime
+79. Generics are used to make algorithms safely -> Generics solve the problem of code duplication -> generics can be used both in functions and data types e.g. in classes, structures or enumerations
+80. Generics can be used in classes, structs, enumerations, global functions and methods
+81. JavaScript is  is a functional language more people do more advanced things with JS
+    1. swift supports both paradigms a object-oriented language & Fundamental Language -> implemtes three fundamental principles of OOP 
+    2. Encapsulation
+    3. Inheritance
+    4. Polymorphism
+82. struct Sun {
+83.   static func illuminate() {}
+84. }  static makes a property or a function static and not overridable By using class, you can override the property or function 90. An extension can be used to add new behavior to an existing type 91.Are closures value or reference types? Closures are reference types. If a closure is assigned to a variable and the variable is copied into another variable, a reference to the same closure and its capture list is also copied closure makes it possible for a function to have "private” variables....  A closure is a function having access to the parent scope, even after the parent function has closed 92. value type vs reference Type :- reference type has some references examples class.. class test { let class = “greg” } .. modifying it with some fun with some will have its reference ...  93. SWIFT PROS ———————  Optional Types -> makes applications crash resistant
+    * Built-in error handling
+    * Closures -> still has access to parent scope variable even after parent function is closed
+    * Type-safe language
+    * Pattern matching 
+    * Tuple patterns are used to match values of corresponding tuple types.
+    * Type-casting patterns allow you to cast or match types.
+    * Wildcard patterns match and ignore any kind and type of value.
+    * Optional patterns are used to match optional values.
+    * Enumeration case patterns match cases of existing enumeration types.
+    * Expression patterns allow you to compare a given value against a given expression
+    * 94. Classes and structures are the very basic building blocks for the majority of programming languages
+    * - Both can extend their functionality to add additional methods without modifying the original class or structure
+    * - Structures do not support inheritance
+    * - struct Person { let name: String } let patrik = Person(name: "Patrik”) let patrik2 = Person() // does not compile, name property needs a value
+    * 95. GENERICS -> Complex applications require clean code without any duplication. Here, generics come in handy as they can help us to avoid unnecessary duplication
+        * Example class Queue<T> {    
+        *     private var data = [T]()
+        *     
+        *     func enqueue(item: T) {
+        *         data.append(item)
+        *     }
+        *     
+        *     func dequeue() -> T? {
+        *         return data.count == 0 ? nil : data.removeFirst()
+        *     }
+        * }
+        * 
+        * let q = Queue<Int>() 96 Q: Explain the lazy keyword. -> used only for classes or struct An initial value of the lazy stored properties is calculated only when the property is called for the first time. There are situations when the lazy properties come very handy to developers. Imagine that the property needs a significant time for initialization, like when instantiating an array of controllers for storyboards used for UIPageViewControllers. class MyController: UIPageViewController {
+        *     
+        *     lazy var myControllers: [UIViewController] = {
+        *         print("initialization")
+        *         guard let storyboard = self.storyboard else { return [] }
+        *         let controller1 = storyboard.instantiateViewControllerWithIdentifier("Controller1")
+        *         let controller2 = storyboard.instantiateViewControllerWithIdentifier("Controller2")
+        *         let controller3 = storyboard.instantiateViewControllerWithIdentifier("Controller3")
+        *         return [controller1, controller1, controller1]
+        *     }()
+        *     
+        *     override func viewDidLoad() {
+        *         super.viewDidLoad()
+        *         
+        *         let _ = myControllers
+        *         let _ = myControllers
+        *     }
+        * }
+        *  In our example, we called myControllers two times in viewDidLoad (it is just for testing purposes, to see how the initialization works). Our lazy variable contains a print statement to demonstrate what’s happening under the hood. After calling two times let _ = myControllers, there is only one message in a console log. That’s because the second time lazy variable is already initialized, and there is no need to do it once again 97 two types of variables: reference and value types -> passing value type, the variable will create a copy of its data, and the reference type variable will just point to the original data in the memory  class instances are reference types ::: Structures, Arrays, Strings, and Dictionaries are value types. 98 defer -> postpone keyword syntax -> f.e func write() { defer {   print(“end”  } print("start for loop”) } 
+    * 99 higher order function -> Functions that take another function as a parameter or return a function as a result are known as higher-order functions -> example filter -> takes array & terns new filtered array -> higher functions is to help us write code with fewer bugs and in less time Ex ::: GENERAL EXAMPLE let numbers = [-10, 4, -3, 5]  var positive = [Int]()    for n in numbers {      if n > 0 {    positive.append(n)    }  }    print(positive) // [4, 5] is general way 
+    * less ways ->>>  EXAMPLE ONE -> let numbers = [-10, 4, -3, 5]   let positive = numbers.filter { (value: Int) -> Bool in    return value > 0   }
+    * EXAMPLE TWO ->  let numbers = [-10, 4, -3, 5]  let positive = numbers.filter { $0 > 0 }
+    * EXAMPLE THREE -> let numbers = [-10, 4, -3, 5]let strings = numbers.map { String($0) }
+    * print(strings) // ["-10", "4", "-3", "5"] 
+    * Swift also provides the map function which returns a new array containing of all the new mapped values 
+85. 
+86.  
+87.  
+88. 
+    * 100  Global functions are closures that have a name and do not capture any values
+    * Nested functions are closures that have a name and can capture values from their enclosing function. Implicit returns from single-expression closures .
+    * can be used to refer to the values of the closure’s arguments by the names $0, $1, $2 —>   reversedNames = names.sorted(by: { $0 > $1 } )
+    * Here, $0 and $1 refer to the closure’s first and second String arguments. Closures can capture and store references to any constants and variables from the context. This is known as closing over those constants and variables   
+    *  
+89. 101 declaring static -> static never change values  
+90.  102 Generic code enables you to write flexible, reusable functions and types  103 Value types in swift are:
+    * structs (incl. arrays and dictionaries)
+    * enumerations
+    * basic data types (boolean, integer, float, etc.)
+91. 
+92.  104 let op1: Int = 1 let op2: UInt = 2
+93. let op3: Double = 3.34
+94. var result = op1 + op2 + op3 -> wrong     var result = Double(op1) + Double(op2) + op3 -> correct way
+95.  105 var defaults = NSUserDefaults.standardUserDefaults() var userPref = defaults.stringForKey("userPref")!
+96. printString(userPref)
+97. 
+98. func printString(string: String) {
+99.     println(string)
+100. }  what is bug in this ?? Answer —> The second line uses the stringForKey method of NSUserDefaults, which returns an optional, to account for the key not being found During its execution, if the key is found and the corresponding value is a string, the above code works correctly. But if the key doesn’t exist, or the corresponding value is not a string, the app crashes with the following error fatal error: unexpectedly found nil while unwrapping an Optional value The solution consists of making sure that the optional is not nil before force-unwrapping it: let userPref = defaults.stringForKey("userPref") if userPref != nil { printString(userPref!) } An even better way is by using optional binding: if let userPref = defaults.stringForKey("userPref") { printString(userPref) } 106. In Swift enumerations —>  raw values and associated values raw enum IntEnum : Int {
+101.     case ONE = 1
+102.     case TWO = 2
+103.     case THREE = 3
+104. }  Associated enum AssociatedEnum {
+105.     case EMPTY
+106.     case WITH_INT(value: Int)
+107.     case WITH_TUPLE(value: Int, text: String, data: [Float])
+108. }      107. The reason is that swift automatically bridges:
+    * number types to NSNumber
+    * strings to NSString
+    * arrays to NSArray
+    * dictionaries to NSDictionary
+109. 
+110.  108. switch case example —> let name = “John" switch name {  case "John" : print("Hello John!")   case "Jane" : print("Hello Jane!”)  default     : print("Hello!”) } 
+111.  109. while loop example ::::  var x = 0 while x<10 {  print(x)  x++  } 110  swift deprecated ++ instead they added  += 1 
+112.  111 if else -> example let swiftIsCool = true -> EXAMPLE  if swiftIsCool { 	print("Of course it is!")
+113. }
+114. else {
+115. 	print("Ooops")
+116. }112 SINGLETON _>>> the singleton pattern is a software design pattern that restricts the instantiation of a class to one object -> restricts creating instances 
+117.  113 insert in a new variable value in to string \(variable) 114 pass a parameters to function // Declare our new function  func sayHelloTo(name:String) {  print("Hello \(name)!") } // Call it   sayHelloTo("John”) 115 declare a function with return types >>> func multiply(a:Int, with:Int)->Int { return a*with } … let product = multiply(2, with:5) print(product) 116 create a new class -> class myClass {
+118.     init() {
+119.         // Called when a new object is created
+120.         print("A new instance was created!")
+121.     }
+122. }
+123. 
+124. // Create a new object of myClass
+125. let c = myClass() 117 CREATE A CUSTOM PARENT CLASS EXAMPLE with functions>>>>>>   class mathClass {
+126.     func add(agg:Int, withg:Int)->Int {
+127.         return agg+withg;
+128.     }
+129.     
+130.     func multiply(a:Int, with:Int)->Int {
+131.         return a*with;
+132.     }
+133. }
+134. let math = mathClass();
+135. print(math.add(agg:1, withg:1));
+136. print(math.multiply(a:2, with:5));
+137. 
+138.  118 CREATE A PARENT CLASS with INHERITANCE —> we can also access its parent’s methods —>>> // Create 'parent' class class Animal { func sayHello() {
+139. 		print("Hello")
+140. 	}
+141. }
+142. // Create a child class
+143. // which 'inherits' our parent class
+144. class Dog : Animal {
+145. }
+146. // Create a new Dog instance
+147. let myDog = Dog()
+148. // We can also access its parent's methods
+149. myDog.sayHello() 
+150.  119. Create/IMPLEMENT a SINGLETON CLASS ->> // Creating our Singleton —— class SharedManager {     // Declare our 'sharedInstance' property
+151.     static let sharedInstance = SharedManager() // Set an initializer - // it will only be called once
+152.     init() {
+153.         print("SomeManager initialized")
+154.     }
+155.     // init() { } not needed —> u can re 
+156.     // Add a test function
+157.     func doSth() {
+158.         print("I'm doing something")
+159.     }
+160. }
+161. 
+162. // The 'init' function will 
+163. // only be called the first time
+164. SharedManager.sharedInstance.doSth()
+165. SharedManager.sharedInstance.doSth() 120. CLOSURE EXAMPLES —> // Declare our closure var myClosure = { print("Hello”) }  myClosure() 121. CLOSURE EXAMPLES —>  // Declare a closure with 2 integer arguments // returning an Integer let multiply = {(x:Int,y:Int)->Int in
+166.     return x-y
+167. } // Call it let result = multiply(2,5) print(result) 122. // Initialize the Array
+168. var str = "Hello World"
+169. // Loop through its individual characters
+170. str.characters.forEach {
+171.     print($0)
+172. } 123 . STRING INTERPOLATION -> Inserting custom variable value in to String 124 CONTAINS -> var a = [1,2,3,4,5] —> if a.contains(6) { }  —>  125  Create an empty array// Initialize the Array - Solution Alet a1 = [Int]() // Initialize the Array - Solution B let a2 : [Int] = [] 126 INSERT IN TO ARRY -> // Initialize the Array var a = [1,2,3]// Insert value '6' at index '2'
+173. a.insert(6, at:1) 
+174.  127 ARRAY -> var a = [1,2,3] -> removeAll() -> remove specific -> a.remove(at:1) 128 REVERSE ARRAY -> // Initialize the Array ---var a = [1,2,3,4,5,6] a = a.reversed()
+175.  129 Sort array in ascending order -> var a = [6,3,2,1,5,4] - a = a.sort { $0 < $1 }  130 Sort array in descending order -> a = a.sort { $0 > $1 } 131 Swap 2 elements in array -> var arr = ["one", "two", "three", "four", "five”] swap(&arr[2], &arr[3]) 132 create Empty dictionary —> // Initialize the Dictionary - Solution A let d1 = [String:String]()// Initialize the Dictionary - Solution B
+176. let d2 : [String:String] = [:] 133 REMOVE KEY —> // Initialize the Dictionary
+177. var dict = ["name": "John", "surname": "Doe"]
+178.  
+179. // Remove item with key 'name'
+180. 
+181. dict.removeValue(forKey:"name")
+182. print(dict) 134 Handle exceptions do { let contents = try NSString(contentsOfFile: "myfile.txt", encoding: NSUTF8StringEncoding) } catch let error as NSError {  
+183.     print("Ooops! Something went wrong: \(error)”) } 135 NSDate() -> for get current Date  136 memory leak -> program incorrectly manages memory allocations -> sql  137 app thinning -> max features with minimum app size .. occupy disk space 138 auto-layout ->  dynamically calculates the size and position of all the views.based on constraints 139 MVC -> MVC is a design pattern that stands for model view controller model -> model objects view -> UI controller -> connect M & V  Model — Core data - parsed network data responses 140 CORE DATA -> is not a database -> that manages object graph manager  141 managed object context -> is asingle object space in core data  142 reuseIdentifier -> Reusability of an already allocated object 143  How many UITableViewCells are allocated when you first load a UITableView?  A UITableView will normally allocate just enough UITableViewCell objects to display the content visible in the table . Because of the reuseIdentifier , the UITableView will not allocate new UITableViewCell objects for each new item that scrolls into view, avoiding laggy animations 144 viewDidLoad is called when the view is loaded, whether from a Xib file, storyboard or programmatically created in loadView 145 viewDidAppear is called every time the view is presented on the device 146 DELEGATES ->  specifying the protocol in class declaration ex: tableView.delegates = self 147 Synchronous: waits until the task has completed -> Asynchronous won’t wait or asynchronous programming -> Grand Central Dispatch (GCD) -> gcd enables us to execute blocks asynchronously on dispatch queue A synchronous function returns only after the completion of a task… An asynchronous function, on the other hand, returns immediately - no blocking 148 What is Singleton Pattern ?  The Singleton design pattern ensures that only one instance exists for a given class and that there’s a global access point to that instance. 149 What is the Swift main advantage ?  To mention some of the main advantages of Swift:
+    * Optional Types, which make applications crash-resistant
+    * Built-in error handling
+    * Closures
+    * Much faster compared to other languages
+    * Type-safe language
+    * Supports pattern matching
+184. 
+185.  150 basic higher order function is a filter. Functions that take another function as a parameter, or return a function, as a result, are known as higher-order functions. Swift defines these functions as CollectionType 
+186.  151 Concurrency - Concurrency is dividing up the execution paths of your program 152 GCD is a library that provides a low-level API to run tasks concurrently while managing threads behind the scenes 153 Deadlock -> sometimes more tasks wait for the other to finish, and neither ever does 154 ! -> implicitly -> indirectly uncover optionals 155 REST -> for making HTTP request (GET POST PUT DEL) 156 App Bundle -> app resources ->  contains the Application Executable File and supports Resource Files such as Localized Content, Image Files and Application Icons 157 iOS supports multi tasking up to 4 ->  158 JSON and SBJSON sbjson is supported in objective c. SBJson is a json framework for ios/iphone 159 GARBAGE COLLECTION -> manages the allocation and release of the memory to your applications 160 App ID -> unique ID with Team ID and a Bundle ID  161 Cocoa ->  Environment for Mac OS X Operating System 162 Cocoa touch -> for iOS 163 RELEASE -> release keyword is used to free a memory location in the system which is not being utilized 164 COLLLECTION -> used to store ,manage -> Collection is to store Objects in the form of either a Set, a Dictionary or an Array 165. IPA -> IPA represents iOS App Store Package 166 tools required to develop iOS applications -> Macintosh computer and iOS SDK 167 Name the framework that is used to construct application’s user interface for iOS ->  UIKit framework is used to develop application’s user interface for iOS 168 types -> class struct enum  objects in those were  values 169 Subscripts are shortcuts for accessing elements from a collection, sequence or list 170. AGILE Testing -> rapid tasks / requirements will come & go …have to test & develop based on that 171.What is a Decorator? decorator is simply a way of wrapping one piece of code with another – literally “decorating” it. Functional Composition”, or “Higher-Order Functions 172   
+187.  
+
+/\/\/\/\/\/
+///GET IMAGE LOCATION
+            //            let documentDirectory: NSString = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
+            //            let imagePath = documentDirectory.appendingPathComponent(convStr)
+            //            print("imagePath  ",imagePath)
+            // WAY TO TO DISPLAY IN IMAGE VIEW
+            //            let imageData:NSData = UIImagePNGRepresentation(image)! as NSData
+            //            let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
+            //            let dataDecoded : Data = Data(base64Encoded: strBase64, options: .ignoreUnknownCharacters)!
+            //            let decodedimage = UIImage(data: dataDecoded as Data)
+            //            imgVV.image = decodedimage
+            ////TEST
+//            let fileManager = FileManager.default
+//            if let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first {
+//                let databasePath = documentsURL.appendingPathComponent(convStr).path
+//                print("directory path:", documentsURL.path)
+//                print("database path:", databasePath)
+//                if !fileManager.fileExists(atPath: databasePath) {
+//                    fileManager.createFile(atPath: databasePath, contents: nil, attributes: nil)
+//                }
+//            }
+            ////'''\\\
+//            let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as String
+//            let imagePath = String("\(documentDirectory)/\(convStr)")
+   //print("imagePath ", imagePath as Any )
+ 
+//GET IAMGE PATH 
+let convStr = String(describing: image)
+            print("convStr  ",convStr)
+            let imageData = NSData(data:UIImagePNGRepresentation(image)!)
+            let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+            let docs: String = paths[0]
+            print("paths  ", paths)
+            print("docs  ", docs)
+            
+            //imageName can save in sqlite to load image later
+//            let fullPath = String("\(docs)/\(convStr).png")
+//            print(". ", fullPath as Any)
+
+//            let result = imageData.write(toFile: fullPath!, atomically: true)
+ 
+.\/\/\/\/\ contents of image Path 
+let documentDirectory: NSString = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
+            let imagePath = documentDirectory.appendingPathComponent(img)
+            print("imagePath  ",imagePath)
+            
+            
+            let imageFromPath = UIImage(contentsOfFile: imagePath)!
+
+            self.imgView.image = imageFromPath
+ 
+??|?|?|?| ENCODING 
+//let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
+                //let dataDecoded : Data = Data(base64Encoded: strBase64, options: .ignoreUnknownCharacters)!
+                //let decodedimage = UIImage(data: dataDecoded as Data)
+                ///\/\
+                //let convStrs = String(describing: objects.saveimages)
+                //let documentDirectory: NSString = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
+
+                //let imagePath = documentDirectory.appendingPathComponent(converts)
+ 
+//let imageData:NSData = UIImagePNGRepresentation(objects.saveimages)! as NSData
+
+//multipartFormData.append(imageData as Data, withName: "file", mimeType: "image/*”)
+ 
+//         for (key, value) in parameters {
+            //         multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: "jsonString")
+
+            //         }
+ 
+ 
+let image = UIImage.init(named: "myImage")
+ let imgData = UIImageJPEGRepresentation(image!, 0.2)!
+/\/\/\/\
+
+Multithreading - GCD , Operation queues,
+Realm…
+Agenda / schedule / List of items
+1. How auto layout works
+2. Why auto layout is needed
+3. Supporting multiple device types with auto layout
+4. Auto layout and changing orientations
+5. Setting up constraints for your views (the art and the science)
+6. The iOS 11 “Safe Area” and how it compares to top and bottom layout guides
+7. Add breakpoints while code is running
+8. Use the new os_log to categorize log statements
+9. Changing UI during a debug session
+10. Managing breakpoints
+11. Viewing return values
+12. Profiling memory us
+
+/\/\/\/\\
+ self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.blue
+
+/\\\/\/\/\/\
+
+UIColor(red: 0.0/255.0, green:180/255.0, blue:220/255.0, alpha: 1.0)
+Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(DashBoard.update), userInfo: nil, repeats: true)
+ 
+/// DELAYS function mentioned inside dead line
+DispatchQueue.main.asyncAfter(deadline: .now() + (3.0 * count)) {
+}
+ 
+UIColor.red.cgColor for border color, or .red
+https://console.firebase.google.com/project/housekeepingios-fb6e2/settings/general/ios:sample.HouseKeeping
+ 
+25Q2PUFWW7 = APN
+E9G5V6T252 = AppID prefix
+
+stephpatsalis@gmail.com
+ucorsa2017
+
+//\/\\/\/\/\/\/\/\/
+//start
+        /*UIView.animate(withDuration: 0.5, delay: 0.0, options: [.curveEaseInOut, .repeat, .autoreverse, .allowUserInteraction], animations: {() -> Void in
+            self.pending1.alpha = 0.0
+        }, completion: {(finished: Bool) -> Void in
+        })
+        //stop
+        UIView.animate(withDuration: 0.1, delay: 0.0, options: [.curveEaseInOut, .beginFromCurrentState], animations: {() -> Void in
+            self.All1.alpha = 1.0
+        }, completion: {(finished: Bool) -> Void in
+        })
+ 
+/‘\/\//\/\/\
+Protocol  = the fundamental of Protocol Oriented Programming is Value Type. No more referencing,
+ blueprint of methods, properties. The protocol can then be adopted by a class, structure, or enumeration. 
+
+INHERITANCE ><><><
+class test1 {
+funt ttt(){
+print("aanad")
+ }
+}
+class rr : test1 {
+ override funt ttt() {
+    super.ttt()
+ print("i, I'm \(name)") }
+}
+}
+let a=rr()
+a. ttt()
+/\]/\/\/\/\/\/\
+
+1. value types keep a unique copy of their data, while reference types share a single copy of their data
+2. o -> same object  1
+3. o->  same object  1
+4. i->  object  1
+
+/\\/\/\\\/\/\/\/\/\/\/\
+let movieDictionary = ["Spectre": ["cast": ["Daniel Craig", "Christoph Waltz", "Léa Seydoux", "Ralph Fiennes", "Monica Bellucci", "Naomie Harris"]]]
+var leadActor: String = ""
+if let movie = movieDictionary["Spectre"],
+    let moviecast = movie["cast"] {
+        leadActor = moviecast[0]
+        print(leadActor)
+}
+/\/\/\/\/\
+
+SWIFT USEFULS - DOCS
+ALL IOS APPS ARE POWERED BY EVENT-DRIVEN PROGRAMMING
+for (key, subJson) in sectionstitleArray {
+                                       // print("Key: \(key) - Value: \(subJson)")
+                                       // for anItemLists in subJson as! Dictionary<String, AnyObject> {
+                                        // let fieldNamesLists = anItemLists["fieldName"] as! String
+                                        // print("fieldNamesLists " , fieldNamesLists)
+                                      //  }
+                                    }
+FOR NORMAL ARRAY TO DISPLY 
+ var testData =[ ,"ergterge","egtregerg","erhgergher”]
+ for newLabel in cell.subviews
+        {
+            if newLabel.tag == 1000
+            {
+                newLabel.removeFromSuperview()
+            }
+
+        }
+
+newLabel.text = testData[indexPath.item]
+FOR DYNAMIC LABEL TEXT IN CELL USING STATIC STORYBOARDING
+//cell.dynamicLbl.text = object["FieldsNames"] as? String  //row
+ 
+ 
+STACK VIEWS
+ //Text Label
+            let textLabel = UILabel()
+            textLabel.backgroundColor = UIColor.yellow
+            textLabel.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
+            textLabel.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
+            textLabel.text  = "Hi World"
+            textLabel.textAlignment = .center
+            
+            //Text Label
+            let textLabel2 = UILabel()
+            textLabel2.backgroundColor = UIColor.yellow
+            textLabel2.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
+            textLabel2.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
+            textLabel2.text  = "Hi World 2"
+            textLabel2.textAlignment = .center
+            
+            //Stack View
+            let stackView   = UIStackView()
+            stackView.axis  = UILayoutConstraintAxis.vertical
+            stackView.distribution  = UIStackViewDistribution.equalSpacing
+            stackView.alignment = UIStackViewAlignment.center
+            stackView.spacing   = 16.0
+            
+            stackView.addArrangedSubview(textLabel)
+            stackView.addArrangedSubview(textLabel2)
+            stackView.translatesAutoresizingMaskIntoConstraints = false;
+
+            cell.addSubview(stackView)
+ 
+MULTI LOOP
+ 
+let labelName = "label\(i)"
+                let label = UILabel()
+
+                label.text = "\(i)”
+ 
+UI ALERT SHOW
+var alert = UIAlertView()
+        alert.title = "Add Item"
+        alert.message = "Enter the item content"
+        alert.addButton(withTitle: "Cancel")
+        alert.addButton(withTitle: "Ok")
+        alert.alertViewStyle = .plainTextInput
+        alert.delegate = self
+
+        alert.show()
+UI ALERT CLICK
+func alertView(_ alertView: UIAlertView, clickedButtonAt buttonIndex: Int){
+        if buttonIndex != 1{
+            return
+        }
+        print("buttonIndex  ",buttonIndex)
+        tasks.append((alertView.textField(at: 0)?.text)!)
+        testTableview.reloadData()
+
+    }
+ 
+  // this method handles row deletion
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // remove the item from the data model
+            tasks.remove(at: indexPath.row)
+            // delete the table view row
+            //use tableview begin & end updates as Optional;
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
+        } else if editingStyle == .insert {
+            // Not used in our example, but if you were adding a new row, this is where you would do it.
+        }
+
+    }
+ 
+segmented control UI]
+
+
+ @IBOutlet weak var control: UISegmentedControl!
+
+
+
+
+    @IBAction func controlChanged() {
+        if(control.selectedSegmentIndex == 0){
+            searchBar.text = ""
+            getProjectsListJSON()
+            if(testData .isEmpty == false){
+                self.testData = self.testDatasample
+            }
+        } else if(control.selectedSegmentIndex == 1){
+            searchBar.text = ""
+            testData2 = [""]
+            //getSitesListJSON();
+            print("<><><> " ,testData2 .isEmpty)
+            if(testData2 .isEmpty == false){
+                self.testData = self.testData2
+            }
+        } else if(control.selectedSegmentIndex == 2){
+            searchBar.text = ""
+            testData3 = [""]
+            ListSiteInfoForms();
+            if(testData3 .isEmpty == false){
+                self.testData = self.testData3
+            }
+        } else {
+            searchBar.text = ""
+            getProjectsListJSON()
+            if(testData .isEmpty == false){
+                self.testData = testDatasample
+            }
+        }
+ self.tableView.reloadData()
+    }
+
+
+SEARCH BAR
+
+1. add UISearchBarDelegate in class controller
+
+2 @IBOutlet weak var searchBar: UISearchBar!
+3 var searchActive : Bool = false
+4 in view did load super ===  searchBar.delegate = self
+5 //search 1
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchActive = true;
+    }
+        func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+        func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        //print("change 1")
+            if(searchText.characters.count > 0){
+            filtered = testData2.filter({ (text) -> Bool in
+                let tmp: NSString = text as NSString
+                let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+                return range.location != NSNotFound
+            })
+            if(filtered.count == 0){
+                searchActive = false;
+            } else {
+                searchActive = true;
+            }
+            self.tableView.isHidden = false
+            self.tableView.reloadData()
+        } else{
+            self.tableView.isHidden = true
+        }
+    }
+6 //
+
+//table 1
+       func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(searchActive2) {
+            return filtered.count
+        }
+        return testData2.count
+    }
+        internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")! as UITableViewCell;
+        if(searchActive2){
+            cell.textLabel?.text = filtered[indexPath.row]
+        } else {
+            cell.textLabel?.text = testData2[indexPath.row];
+        }
+        return cell;
+    }
+??CALL OTHER WINDOW
+//let OO = DashboardViewController()
+methid.get lists() or lists
+GENERAL APPEND IN TABLE VIEW CELL 
+//tasks.append((alertView.textField(at: 0)?.text)!)
+
+     //testTableview.reloadData()
+cell.textLabel?.text = myName 
+ 
+//// auto-release
+autorelease {
+}
+///swift has nil-checking and has strict type usages
+///use suggested constraints 
+/// CLOSURES - Whenever you use function inside another function, a closure is used
+—> say variable is also inside the closure, and could be accessed by any other function that might be declared within sayAlice()
+function sayAlice() {
+var alice = 'Hello Alice’;   
+ var say = function() { console.log(alice); }
+    // Local variable that ends up within closure
+    return say;
+}
+sayAlice()();// logs "Hello Alice”
+//Nested Functions - Functions can be nested 
+nested function have acces to variables declared outer function….
+Ex:- function returnFif() -> Int{ var y = 10  fun add(){  y += 5 }  add()  return y }
+TUPLES - Use tuple to return multiple values from a function as a single compound value
+* fun some() -> (double,double,double){ return (44.4,63,49 }
+Constraints or AUTO LAYOUT 
+1. Try To Use Reset To Suggested Constraints , then Use Aspect Ratio With Height & Weight & Aspect Ratio…
+
+Static Type vs Dynamic Type ::
+Static type = java , Dynamic type = python ;
+static = declaration of variables is must before they a’r used. like stuck int,string
+dynamic = declaration of variables is not needed … less code .. explicitly declare .. like num = 6;
+
+HOW TO RETURN SOMETHING FROM CALLING A FUNCTION ()
+private func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRendere
+        if overlay is MKPolylin {
+            var polylineRenderer = MKPolylineRenderer(overlay: overlay)
+            return polylineRenderer
+        }
+        return nil
+    }
+A RESTful API is an (API) that use HTTP requests to GET, PUT, POST and DELETE data 
+//////////\\\\\\\\\\\\ //////////\\\\\\\\\\\\ //////////\\\\\\\\\\\\
+A function  can return another function as its value
+Ex : fun somefunc () -> (Int ->Int) { func addOne(number: Int)-> Int { return 1+ number
+} return addOne }
+//////////\\\\\\\\\\\\ //////////\\\\\\\\\\\\ //////////\\\\\\\\\\\\
+
+/////Access Global - Classes \\\\\\
+class name {  var one = 0   func test() -> String { return "A test has tow \(sides) one"
+    }  }
+var fun2 = name()   fun2.one = 7  var myFun = fun2.test()
+
+///////|||||\\\\\\\\
+Enumerations - Case Statements - Switch
+
+////////\\\\\\\\\\
+GENERICS  -> Write a function inside Angle Brackets to make it a genetic the function
+func repeat<ItemType>(list: ItemType, times:Int) -> ItemType[]{
+    var test = ItemType[]()
+    for i in 0..times {       test += times }  return test  }
+repeat("Knock" , 4)
+
+///////\/\/\/\/\/\/\/\/\/\/\/\/\
+Control Flow = if switch while for 
+///////\/\/\/\/\/\/
+Collection Types = Array  & Dictionary & Sets 
+create modify iterating A D Sets
+//\/\/\/\/\/\/\/\/\/\/\
+Swift vs obj -c = swift handles optional types … optionals says either “there is a value “ or “no value at all”
+/\/\/\/\/\/\/\/\/
+
+swift is type safety = if your code expects string …. u can’t pass it an INT
+/\/\/\/\/\/\/\/\/
+insert(“hhgr”) or append(“rher") or push or removeLast() or removeFirst() or removeAll()or insert(“gage” , at : 0 ) , string.contain(“test”) { }
+/\/\/\/\/\/\/\/\
+normal array  var favoriteGenres = ["Rock", "Classical", "Hip hop”]
+set array var favoriteGenres:Set = ["Rock", "Classical", "Hip hop”]
+/\/\/\/\/\/
+for loop for array 
+
+/\\/\\\
+var favoriteGenres:Set = ["Rock", "Classical", "Hip hop"]
+for i in favoriteGenres {
+    print(i)
+}
+/‘//‘/‘/‘/‘/‘
+var favoriteGenres:Set = ["Rock", "Classical", "Hip hop"]
+for i in favoriteGenres.sorted() {
+    print(i)
+}
+/\/\/\/\\\
+var favoriteGenres = ["Rocky54y", "Classical", "Hip hop","eert"]
+for i in favoriteGenres {  //also sorted()
+    print(i)
+}
+/\/\/\/\/
+var favoriteGenres = [7,5,6,3,5,3,3]
+
+for i in 0..<favoriteGenres.count {
+    print(i)
+}	
+/\/\/\/\
+1. var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin”]
+2. (key:value)
+3. /\/\/\/\/\/
+/\/\/\/\ append new key value in to array
+var airports = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
+airports["LHR"] = "London"
+print(airports) is ["LHR": "London", "DUB": "Dublin", "YYZ": "Toronto Pearson”]
+/\/\/\/\/\ update array value for(key,value)
+var airports = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
+airports["LHR"] = "London"
+if let oldValue = airports.updateValue("normalkeyvalue", forKey: "YYZ") {
+    print("The old value for DUB was \(oldValue).”) ====>>> ["LHR": "London", "DUB": "Dublin", "YYZ": "normalkeyvalue"] }
+/\/\/\/\/\/\/\
+1. if let removedValue = airports.removeValue(forKey: "DUB") {  }
+2. /\/\/\/\/\/\/\/\/ airports["LHR"] = nil —> clear key & value
+/\/\/\/\/\/\/\/\
+var airports = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
+for oldValue in airports.keys {
+    print("The removed value \(oldValue).”) —> access key names
+}
+/\/\/\/\/\
+var airports = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
+for oldValue in airports.values {
+    print("The removed value \(oldValue).”) —> access values 
+}
+/\/\\/\/\/\/\\ 
+1. Control Flow - for-in —> array 
+2. let names = ["Anna", "Alex", "Brian", "Jack"]
+3. for name in names {
+4.     print("Hello, \(name)!")
+5. }
+6. /\/\/\/\/\/\\/\ for - in —> dictionary
+7. let numberOfLegs = ["spider": 8, "ant": 6, "cat": 4]
+8. for (animalName, legCount) in numberOfLegs {
+9.     print("\(animalName)s have \(legCount) legs")
+10. }
+11. /\/\/\/\/\/\/\ SORTING ARRAYS
+12. let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+13. func backward(_ s1: String, _ s2: String) -> Bool {
+14.     return s1 > s2
+15. }
+16. var reversedNames = names.sorted() ->>> Ascending
+17. /\/\/\/\/\/\ Backward Sorting
+18. func backward(_ s1: String, _ s2: String) -> Bool {
+19.     return s1 > s2
+20. }
+21. var reversedNames = names.sorted(by: backward)
+22. /\/\/\/\/\/\/\
+23. ARC - automatic reference3 counting - to track app m/y usage ,
+24. ARC automatically frees up the memory used by class instances when those instances are no longer needed
+25. /\/\/\/\/\/\/\/\/\/\/\
+26.  
+
+/\/\/\/\/\
+
+SELECT DISTINCT( ContactsID), Name , Number  ,  Invite FROM Contacts ORDER BY ContactsID ASC LIMIT 1
+
+/\/\/\
+balaji.m@chembiantech.com Varsha44
+
+stephpatsalis@gmail.com , Wednesday20
+
+~/Library/MobileDevice/Provisioning Profiles
+/\/\/
+
+select count(*)  as count from _Contacts_
+
+SELECT substr(Name, 1, 1) FROM _Contacts_ where ContactsID > 0 and ContactsID <= 5
+
+SELECT * FROM _Contacts_ where ContactsID > 0 and ContactsID <= 5 ORDER BY substr(Name, 1, 1) ,
+
+/\/\/\/
+SELECT * FROM Contacts LIMIT 25 OFFSET 10
+/\\/\/\/\
+INSERT INTO Contacts (Name,Number,Invite) VALUES ( 'test' , '2929210392' , 'false’ )
+
+row = db.execute("select * from (select * from (SELECT DISTINCT(ContactsID),Name,Number,Invite FROM Contacts ORDER BY ContactsID ASC LIMIT " + Limit + ") ORDER BY ContactsID DESC limit 10) ORDER BY ContactsID ASC");
+drop table testt 
+
+select * from Contacts
+
+/\/\/\.. for back ls for list
+
+lazy var refreshControl = UIRefreshControl()" I find it good practice to avoid forced unwrapping of variables
+
+/\/\/\/\/\/\ Choose Correct Data Storage Option
+You have several options, including:
+* Store them using NSUserDefaults
+* Save to a structured file in XML, JSON, or Plist format
+* Archive using NSCoding
+* Save to a local SQL database such as SQLite
+* Use Core Data.
+/\/\/\/\/
+Use AUTORELEASE POOL
+/\/\/\/
+ASYNC , SYNC TASKS
+/\/\/\
+URL SESSION = CONFIGURATION … SHARED DEFULT BACKGROUND ENUMERAL
+/\/\/\
+TYPES OF TASKS 
+DATA TASKS BACKGROUND TASKS
+/\/.\/\
+GCD - Serial queue or Concurrent queue
+1. Main queue: runs on the main thread and is a serial queue.
+2. Global queues: concurrent queues that are shared by the whole system. There are four such queues with different priorities : high, default, low, and background. The background priority queue is I/O throttled.
+3. Custom queues: queues that you create which can be serial or concurrent. These actually trickle down into being handled by one of the global queues.
+
+>>>  UILabel(frame: CGRect(origin: CGPoint(x: 0,y :15), size: CGSize(width: 60, height: 32)))
+>>>>> 
+
+UISEGMENTED CONTROL —>
+        let items = ["one", "two", "three","one", "two", "three","one", "two", "three","one", "two", "three","one", "two", "three","one", "two", "three",]
+        let segmentedControl = UISegmentedControl(items: items)
+      segmentedControl.frame = CGRect(x: 10, y: 60, width: 200, height: 50)
+        segmentedControl.addTarget(self, action: #selector(self.SeGmentChange), for: .valueChanged)
+        segmentedControl.selectedSegmentIndex = 1
+        view.addSubview(segmentedControl)
+    }
+    func SeGmentChange(sender: UISegmentedControl) {
+        print("segmentedControl  change  " , sender.selectedSegmentIndex
+    }
+/\/\/\
+UIView.animate(withDuration: 0.3) {
+            self.SEgControl.frame.origin.x = (self.SEgControl.frame.width / CGFloat(self.SEgControl.numberOfSegments)) * CGFloat(self.SEgControl.selectedSegmentIndex)
+        }
+/\/\/\

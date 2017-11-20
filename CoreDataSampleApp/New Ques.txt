@@ -1,0 +1,320 @@
+Interview Questions SWIFT 4.0
+
+SWIFT - 
+Collection Types - Array ex:- var arr: [String] = [“test”,“wdwd"] , set - var favoriteGenres: Set = [“ged”,”eve"]
+ , dictionaries ex:- var airports : [String:String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
+ ,
+uses variables to store & retrieve values .. known as constants var = variable & let = constants
+Swift has tuples - You can use a tuple to return multiple values from a function as a single compound value
+Swift also introduces optional types, which handle the absence of a value (nil) 
+Type Annotations :  when you declare a constant or variable, to be clear about the kind of values the constant or variable can store , 
+1. var welcomeMessage: String
+
+Integers  = int string float double
+
+Types in Swift fall into one of two categories: first, “value types”, where each instance keeps a unique copy of its data, usually defined as a struct, enum, or tuple. The second, “reference types”, where instances share a single copy of the data, and the type is usually defined as a class
+
+Type Aliases - alternative name for an existing type
+Optional Binding - You use optional binding to find out whether an optional contains a value, and if so, to make that value available as a temporary constant or variable
+Error handling -> u can use do try catch errors
+Assertions and Preconditions - checks that happen at runtime
+String Concatenation = combining two strings  ,EX: 
+1. var variableString = "Horse"
+2. variableString += " and carriage"
+String Interpolation = Inserting 
+
+ARRAY .contains
+
+You can use .append or += in array 
+
+.sorted() or .reversed() in array while iterating n number of items 
+
+
+Control Flow :- swift provides for-in , for , if (conditional statement), switch, while for iterating over arrays , dictionaries 
+
+Index path = position or index of array 
+
+IB Designable :- custom build classes to view storyboard
+IB Inspectable :- properties related to that built class
+
+Playground :- if u want to run certain piece of code to execute or simple logic
+
+Tableview Delegate , Scroll view Delegates
+
+guard = early exit from code… like finding out basic/fundamental errors
+example :
+1. guard let name = person["name"] else {
+2. return
+3. }
+
+function with multiple return :  guest(TEXT1 : “ONE” ,TEXT2 : “TWO”)
+ fun guest(TEXT1 : String , TEXT2 : String){ print(TEXT1)}
+
+Function Types  ->>>>  print("Result: \(mathFunction(2, 3))”)
+
+CLOSURES — Reference Types
+* Global functions are closures that have a name and do not capture any values. 
+* Nested functions are closures that have a name and can capture values from their enclosing function.   Encapsulation is hiding unnecessary data in a capsule or unit Abstraction is showing essential feature of an object   Trailing Closures -  A trailing closure is written after the function call’s parentheses
+    1. func someFunctionThatTakesAClosure(closure: () -> Void) {
+    2. // function body goes here
+    3. }
+    4. 
+    5. // Here's how you call this function without using a trailing closure:
+    6. 
+    7. someFunctionThatTakesAClosure(closure: {
+    8. // closure's body goes here
+    9. })
+    10. 
+    11. // Here's how you call this function with a trailing closure instead:
+    12. 
+    13. someFunctionThatTakesAClosure() {
+    14. // trailing closure's body goes here
+    15. }
+* 
+*  Escaping Closures :- Indicate using @escaping before function that means  closure is passed as an argument to the function or takes closure as one of its parameters 
+*  Auto Closures :- created to wrap an expression that’s being passed as an argument to a function
+    1. print("Now serving \(customerProvider())!")
+* 
+*  Enumerations : - enum represents enumerated data type like case statement  
+    1. enum CompassPoint {
+    2. case north
+    3. case south
+    4. case east
+    5. case west
+    6. }
+    * var directionToHead = CompassPoint.west
+    *  
+*  Classes - Properties, Methods, Subscripts, Initialization, Extensions, and Protocols.
+    *  properties to store values 
+    *  methods to provide functionality 
+    *  subscripts to provide access to their values using subscript syntax 
+    *  initializers to set up their initial state 
+    * Be extended to expand their functionality from a default implementation Classes have additional capabilities that structures do not:
+        *  Inheritance, Type Casting, Deinitialization, and Automatic Reference Counting. Inheritance enables one class to inherit the characteristics of another. 
+        * Type casting enables you to check and interpret the type of a class instance at runtime. 
+        * Deinitializers enable an instance of a class to free up any resources it has assigned. 
+        * Reference counting allows more than one reference to a class instance. Example of Classes & Struct Definitions :
+            1. struct Resolution {
+            2. var width = 0
+            3. var height = 0
+            4. }
+            5. class VideoMode {
+            6. var resolution = Resolution()
+            7. var interlaced = false
+            8. var frameRate = 0.0
+            9. var name: String?
+            10. }
+        * 
+        *  All structures and enumerations are value types in Swift —> means any structure and enumeration instances you create are always copied when they are passed around in your code 
+        *  Subscripts are typically used as a shortcut for accessing the member elements in a collection, list, or sequence 
+        *  Downcasting -  normally u downcast a subclass type with a type cast operator (as? or as!)  attempts the downcast and force-unwraps the result as a single compound value  
+        *  Type cast for Any and AnyObject
+            1. var things = [Any]()
+        * 
+        *  A protocol defines a blueprint of methods, properties, and other functionality. 
+        *  ARC automatically frees up the memory used by class instances when those instances are no longer needed ARC tracks how many properties, constants, and variables are currently referring to each class instance ARC will not deallocate an instance as long as at least one active reference to that instance still exists 
+        *  use can use auto release pool or deallocate objects deinit
+            * var reference1: Person?
+            * reference1 = nil
+            * arrow (→) is used to mark grammar productions and can be read as “can consist of.”
+        * 
+        *  type alias ->  alternate naming to existing type ,… named alias of an existing type into your program  Type aliases do not create new types; they simply allow a name to refer to an existing type 
+        *  UserNotification Action = Design functionalities UI when scrolling notifications 
+        *  Location they using -> CLLocationManager 
+        *  difference b/n 3rd party sdks & 3rd party  frameworks
+        * Push notification to propagate/spread information to devices
+        * Game center used to connect game center service , helps to interact with online friends to challenge with them 1 on 1
+        * wallets -> organize movie tickets, gift cards , credit cards
+        * Apple Pay -> secure pay for goods ,foods , clothing
+        * In app purchase -> with in app you make items to sell for free or paid
+        * keychain -> shares password from its keychain with other applications
+
+Firebase - > get .p8 certificate using apple paid developer id from apple site .go to fire base console -> create new project & give bundle identifier & get server key & plist & add plist to your project & configure & connect to fcm & get device token & sac it some where & using UNNortification framework capture received notification to display in banner..
+
+Concerning datas -> sending datas to properties,KVB , callbacks, prepare for segue. 
+– Passing forward, you should use `prepareForSegue`
+– Passing backward, you should use delegation
+– Passing to multiple things or fire some other functions (VC, M…) : use `NSNotificationCenter`(Firing) 
+
+Pass data to another view controllers using Segue or using custom properties (i.e by presenting view controllers using instantiateViewControlleWithIdentifier) 
+
+Back Pass data ->  by creating a Protocol method  which we will pass the data from second controller http://swiftdeveloperblog.com/pass-information-back-to-the-previous-view-controller/
+
+globally pass data Create single ton class & store… retrieve from that .
+
+
+Core Data Basics -> is ORM (i.e Modal layer) which allows to save objects or data in sqlite
+- 3 key objects - managed object model , managed object context ,persistent store coordinator
+
+ Swift program is deployed :- 
+ Tomcat installation by default. The deploy script bundles the client code into JavaScript, gathers all the server side classes required and packages them into file Hello.war
+
+SWIFT FEATURES In conditional programming SWIFT has if & switch , entire classes of unsafe code, ARC ,type safety
+* Swift enables you to define methods in class, structure or enumeration but objective c wont
+
+A literal is the source code representation of a value of an integer, floating-point number, or string type & boolean literals true false
+
+Swift provides unsigned and signed integers in 8, 16, 32 and 64 bit forms
+
+Deinitializer -> de-allocating class instance
+
+control transfer statements used in Swift:-  	•	Continue
+* Break
+* Return
+
+
+Subscripts -> shortcuts for accessing the member elements of a collection, list, or sequence
+
+JSONSerialization have ReadingOptions ->  mutableContainers for Arrary & Dictionary
+
+DispatchGroup -> dispatching in main queue & background queue 
+
+storyboard or xib(collection of xibs == nib) in our iOS app .
+
+Using IB DESIGNABLE - programatic creating UI with clack name using IB DESIGN .. IB INSPECTABLE .. PROPERTIES .. WILL CREATE IB OUTLETS —> IBOutlet is a property related to a view .. INJECTING IB OUTLETS IN TO VIEW we call Dependency Injection.  
+
+Dependency Injection -> constructor injection, property injection and method injection
+
+Types of Notifications -> Remote and Local 
+
+order functions -> Used on collection Types (Arrays , Dictionaries) -> map(_:)  filter(_:) sorted(by:)
+
+Any -> represents instance of any type 
+Any object -> represent an instance of any class type
+
+Visualize Chart library -> Charts       Core Plot      TEAChart
+
+For creating Generic Protocol we can use associatedtype
+
+Generic code enables you to write flexible & reusable functions
+
+If high priority thread waits for low priority thread, this is called Priority Inversion
+if low priority thread temporarily inherit the priority of the highest priority thread, this is called Priority Inheritance
+
+We use optional chaining  when we do not really care if the operation fails or will values 
+
+There are many different ways such as Delegate,NS Defaults, Segue, and NSNotification, Callbacks
+
+SwiftLint -> clean Code -> SwiftLint can automatically correct certain violations -> autocorrect
+
+Reduce battery Drain Cause -> over using of CPU cause battery drain … so u have to make CPU in idle … 
+* prevent background tasks 
+* Suspend Activity When Your App Becomes Inactive or Moves to the Background
+
+if normal app is draining battery ->
+ Work Less in the Background
+ Prioritize Work with Quality of Service Classes
+if heavy app like game causing -> Gps tracking or set accuracy to lower 
+
+applicationDidBecomeActive
+applicationWillEnterForeground
+applicationDidEnterBackground
+applicationDidBecomeInactive
+
+Assigning quality of service (QoS), Thread Queues … split up heavier work at background & 
+
+Protocols -> Mainly For Re use , CLEAN CODE in flexible way, making code readable.
+
+Delegates -> delegate is just a class that does some work for another class. for passing data between controllers
+
+Optional Types, which make applications crash-resistant
+
+Complex applications require clean code without any duplication. Here, generics come in handy as they can help us to avoid unnecessary duplication
+
+! - unwrap the optional
+? - tells its optional -> hold a value or not
+
+one handle errors in Swift -> try func 
+
+ guard statement -> prevention
+
+ convert Swift String into an Array -> let characters = Array(Ustring.characters)
+
+let SwiftStringsArray = ["iPhone","iPad","iPod"]
+let MySwiftString = SwiftStringsArray.joinWithSeparator(",")
+
+Singleton =  global variable.
+
+What is a protocol? 
+A protocol defines a blueprint of methods, properties, and other requirements that suit a particular task or piece of functionality. Protocol is used to specify particular class type property or instance property. EX:- passing data back to view controllers 
+
+What is ARC? 
+Automatic Reference Counting (ARC) to track and manage your app’s memory usage. ARC automatically frees up memory of class instances when those instances no longer needed. 
+ARC - : 
+WHAT IS ? Automatic Reference Counting (ARC) to track and manage your app’s memory usage. ARC automatically frees up memory of class instances when those instances no longer needed. 
+HOW IT WORKS ? Every time you create a new instance of a class, ARC allocates a chunk of memory to store information about that instance. ARC tracks how many properties, constants, and variables are currently referring to each class instance. ARC will not deallocate an instance IF at least one active reference to that instance still exists.
+HOW TO CLEAR ?  whenever you assign a class instance to a property, constant, or variable, that property, constant, or variable makes a strong reference to the instance. The reference is called a “strong” reference by default. TO CLEAR that strong reference make them as Weak References.
+ weak references are always declared as optional types. This means when the reference count goes to zero, the reference can automatically be set to nil
+
+What is an app bundle?
+The application bundle stores everything that the application requires for successful operation. Files inside bundles include . Files includes -> info.plist(App settings, Executables, Resource files)
+When would you use a swift struct vs class? -> to create single tn class -> struct wont create any instance _>  reduce complexity ->
+
+What is pass by value vs pass by type?
+ pass by value -> when the parameter is not inout
+pass-by-reference -=> if the parameter is inout
+Arrays and strings are struct instances.
+
+How do you create a custom view?
+.xib
+Using IB Design
+
+How to do http requests and parse JSON?
+HTTP Requests with URLRequest , URLSession ,Requests with Alamofire
+JSONSerialization from the built-in Foundation framework.
+You can use the Foundation framework's JSONSerialization class to convert JSON or response into Swift data types like Dictionary, Array
+
+Swift json..
+
+ parsing / deserialization ->  iterating array or dictionary using key value…
+
+What is polymorphism? 
+ classes have different functionality while sharing a common interface
+
+What is UIWindow? UIApplication?
+UIWindow -> w/o using storyboard
+UIApplication -> The UIApplication class defines a delegate that conforms to the UIApplicationDelegate protocol methods. for example, app launch and app termination . App loading.
+
+How do threads work in iOS?
+in IOS threads works based on GCD.. 
+GCD provides dispatch queues. 
+GCD provides three main types of queues:
+1. Main queue: runs on the main thread and is a serial queue.
+2. Global queues: concurrent queues that are shared by the whole system. There are four such queues with different priorities specified with Quality of Service (QoS): User-interactive (Default) User-initiated(high)  Utility(low) , background
+3. Custom queues:  serial queue or concurrent queues 
+
+Diff between XIBs and Storyboard files?
+A storyboard is a visual representation of the user interface of an iOS application, showing screens of content and the connections between those screens
+
+XIB : - using xib to create custom a view & to load that created view using created name in UI Storyboard.
+
+https://medium.com/anantha-krishnan-k-g/ibdesignable-and-ibinspectable-in-swift-3-702d7dd00ca
+
+IB designable
+IB inspectable 
+
+-> IB designable used to create custom elements like button tableview, picker view popup and IB inspectable allow to set attributes for created IB design views.
+
+IOS LIFE CYCLE -> when user touch app -> running/ Active , not running/  Inactive , backgrounded/suspended , Terminated
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

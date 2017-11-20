@@ -1,0 +1,295 @@
+EXAMPLES:-  http://swiftdeveloperblog.com/
+
+For-In Loops:
+iterating array
+1. let names = ["Anna", "Alex", "Brian", "Jack"]
+2. for name in names {
+3. print("Hello, \(name)!")
+4. }
+iterating dictionary
+1. let numberOfLegs = ["spider": 8, "ant": 6, "cat": 4]
+2. for (animalName, legCount) in numberOfLegs {
+3. print("\(animalName)s have \(legCount) legs")
+4. }
+Array:- let defaultValue = ["1","2","3","","4","","5”] Array = Array.filter { $0 != "” }
+Dictionary:- var details: [[String: String]] = [["name": "a", "age": "1"],["name": "b", "age": "2"],["name": "c", "age": "”]]
+let filteredDetails = details.filter { !$0.values.contains("") }
+
+
+protocol MyProtocol {
+    func setResultOfBusinessLogic(valueSent: String)
+}
+var delegate:MyProtocol?
+delegate.setResultOfBusinessLogic(fullName)
+unwrap the optional:
+if let del = delegate { del.setResultOfBusinessLogic(fullName) }
+optional chaining
+ delegate?.setResultOfBusinessLogic(fullName)
+
+Passing Parametrers & Returning values from it :-
+func setResultOfBusinessLogic(valueSent: String) -> String {
+        print("V ", valueSent)
+        let Str = valueSent
+        return Str
+    } 
+/\/\/\/\/\/\/\\\/\/
+PassBack Data !!! EXAMPLE
+class ViewController: UIViewController,UITableViewDelegate,MyProtocol,UITableViewDataSource,UIAlertViewDelegate{
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "passData" { // your identifier here
+            if let controller = segue.destination as? SecondViewController {
+                controller.test = "fropm one"
+            controller.delegate = self
+            }
+        }
+    }
+Since Segue name is “passData” which is presented as Show from Storyboarding UI 
+    func sendNameToPreviousVC(valueSent: String) {
+        valueSentFromSecondViewController = valueSent
+        print("Received from second window " , valueSentFromSecondViewController!)
+    }
+}
+//in second
+protocol MyProtocol {
+    func sendNameToPreviousVC(valueSent: String)
+}
+class SecondViewController: UIViewController {
+     var delegate:MyProtocol?
+override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Perform some business logic. Anything!
+        let firstName = "Sergey"
+        let lastName = "Kargopolov"
+        let fullName = firstName + " " + lastName
+        
+        sendBackFriendList(valueSent: fullName)
+    }
+    func sendBackFriendList(valueSent: String){
+        delegate?.sendNameToPreviousVC(valueSent: valueSent)
+    } }
+/\/\/\/\/\
+
+Extending A class means -> implementing a new method from its default implementation
+
+Structure is much more faster than Class. Also, if you need inheritance then you must use Class. Most important point is that Class is reference type whereas Structure is value type
+
+DECLARE A CLASS 
+* class Person {
+* var age  = 25
+* init() { 
+*    print(“A new instance of this class Person is created.”) 
+*  } 
+* } 
+* let personObj =  Person()
+* print(“This person age is \(personObj.age)”)
+
+CREATING Instance for CLASS
+class Flight {
+var id:Int?
+var description:String?
+var destination:String?
+var airlines:String?
+init(){
+  id = 100
+  description = "first ever flight of Virgin Airlines"
+  destination = "london"
+  airlines = "Virgin Airlines"
+} }
+CREATING Instance for STRUCT
+struct Flight2 {
+var id:Int
+var description:String
+var destination:String
+var airlines:String  }
+now lets create instance of both.
+var flightA = Flight()
+var flightA = Flight2.init(id: 100, description:"first ever flight of Virgin Airlines", destination:"london" , airlines:"Virgin Airlines" )
+now lets pass these instance to two functions which modify the id, description, destination etc..
+func modifyFlight(flight:Flight) -> Void {
+flight.id = 200
+flight.description = "second flight of Virgin Airlines"
+flight.destination = "new york"
+flight.airlines = "Virgin Airlines"
+}
+also,
+func modifyFlight2(flight2: Flight2) -> Void {
+var passedFlight = flight2
+passedFlight.id = 200
+passedFlight.description = "second flight from virgin airlines" }
+
+Implementing a Singleton Class in Swift
+* class CloudCodeExecutor {
+*     // Declare class instance property
+*     static let sharedInstance = CloudCodeExecutor()
+*     // Declare an initializer 
+*     // Because this class is singleton only one instance of this class can be created
+*     init() {
+*         print("CloudCodeExecutor has been initialized")
+*     }
+*     // Add a function
+*     func processCloudCodeOperation() {
+*         print("Started processing cloud code operation")
+* 
+*         // Your other code here
+*     }
+* }
+* // Call function of Singleton class
+* CloudCodeExecutor.sharedInstance.processCloudCodeOperation()
+* // Call cloud code operation function again
+* CloudCodeExecutor.sharedInstance.processCloudCodeOperation()
+* // And again to see that class initializer was called only once
+* CloudCodeExecutor.sharedInstance.processCloudCodeOperation()
+
+FILTERING EXAMPLES
+var defaultValue = ["1","2","3","","4","","5"]
+defaultValue = defaultValue.filter { $0 != "" }
+var Array:[String] = []
+func one() {
+    Array.removeAll()
+    Array.append(defaultValue[0])
+    Array.append(defaultValue[1])
+    Array.append(defaultValue[2])
+    print("result 1 " , Array)
+}
+one ()
+func two() {
+    Array.removeAll()
+    Array.append(defaultValue[2])
+    Array.append(defaultValue[3])
+    Array.append(defaultValue[4])
+    print("result 2 " , Array)
+}
+two ()
+func three() {
+    Array.removeAll()
+    for items in defaultValue.reversed() {
+        Array.append(items)
+    }
+    print("result 3 " , Array)
+    var details: [[String: String]] = [
+        ["name": "a", "age": "1"],
+        ["name": "b", "age": "2"],
+        ["name": "c", "age": ""]
+    ]
+    let filteredDetails = details.filter { !$0.values.contains("") }
+    print(filteredDetails)
+    
+}
+three()
+func four(){
+    var numberOfLegs = ["spider": 8, "ant": 6, "cat": 4]
+    numberOfLegs["bird"] = 2
+}
+four()
+
+EXTENSION EXAMPLES :- extending string 
+  let firstName:String = "Sergey"
+ firstName.greatTheWorld()
+/// declare outside class view controller
+extension String {
+    func greatTheWorld() {
+        print("Hello world")
+    }
+}
+ 
+CLOSURES:- they are self-contained blocks of functionality 
+Example:- 	simple closure:-	let simpleClosure = {  print("From a simpleClosure")  }  // Call closure    simpleClosure()
+closure with Multiple Arguments:- let fullName = { (firstName:String, lastName:String)->String in
+    return firstName + " " + lastName
+}
+// Call Closure
+let myFullName = fullName("Sergey", "Kargopolov")
+print("My full name is \(myFullName)")
+
+/// Create Dictionary = let Dictionary = [String:String] ()
+////Add items to Dictionary 
+var myDictionary = ["first_name": "Sergey", "last_name": "Kargopolov"]
+myDictionary["radisson"] = "tets"
+
+//loping through dictionary 	.	var myDictionary = ["first_name": "Sergey", "last_name": "Kargopolov"]
+for (key,values) in myDictionary {
+print("\(key) = \(value)")
+}
+//Remove Item From Dictionary  	.	myDictionary.removeValueForKey("last_name")
+//Check if Array is Empty ->  .isEmpty , .count > 0
+//loping through Array
+* var myArray = ["Swift", "Objective-C", "PHP"] 
+* for arrayElement in myArray {
+*     print(arrayElement)
+* }
+
+Loop Over Array of Elements with Index-> 	.	var myArray = ["Swift", "Objective-C", "PHP"]
+* // Iterate over Array elements. Display element and it's index
+* for (index, element) in myArray.enumerate() {
+*     print("Element \(element) is at index \(index)")
+* }
+
+Create Custom Class in Swift WITH SORT AARRY :- 
+class test {  or struct test {
+    let fname : String
+    let lname : String   
+    init(fname: String , lname: String) {
+        self.fname = fname
+        self.lname = lname
+    }
+}
+var objects: [test] = []
+let fn = test(fname: "Dinesh", lname: "kumar")
+let ln = test(fname: "Nir", lname: "kumar")
+objects.append(fn)
+objects.append(ln)
+
+Using NSUSERDefaults to store -> Int,String,array,data
+
+Write String Value Into a File ->  using NSSearchPathForDirectoriesInDomains
+
+BACKGROUND THREAD -> 	
+DispatchQueue.global(qos: .userInitiated).async {
+    // Do some time consuming task in this background thread
+}
+MAIN THREAD -> allowed to update user interface
+ DispatchQueue.main.async {
+}
+
+* // Get main screen bounds - H & W
+*         let screenSize: CGRect = UIScreen.main.bounds  
+*         let screenWidth = screenSize.width
+*         let screenHeight = screenSize.height
+
+RECEIVE PUSH NOTIFICATIONS USING DEFAULT APNS :_ 
+-> Use  USER Notification Framework Configure at  didFinishLaunchingWithOptions call the registerUserNotificationSettings to authorize to didRegisterForRemoteNotificationsWithDeviceToken
+to get device token
+-> uninstall or reinstall the app, the device token would change
+-> We can be sent with video or image with push notification. But maximum payload is 4kb
+->  in didReceive notification u will receive notification data 
+SEND PUSH NOTIFICATIONS USING backend
+set up your backend to connect to APNs to send notifications to devices! 
+
+Callbacks -> Callback Functions Are Closures .When we pass a callback function as an argument to another function …  Implemented using Completion Handlers ->
+func useCallbacks(name : String , completion:(_ result : String) -> Void) {
+    completion("We finished!")
+}
+useCallbacks(name: "Name") { (result : String) in
+    print("print \(result)")
+}
+
+AutoLayout -> Dynamically Calculate size & width for screen
+AutoSize Classses ->  Dynamically Calculate size & width for screen
+
+New changes in USerNotifications -> 		
+We can add audio, video and images.
+We can create custom interfaces for notifications.
+
+
+triggers for a local notification ->  Location, Calendar, and Time Interval
+
+
+
+
+
+
+
+
+
+ 
